@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="serviceLocator" class="com.don.ServiceLocator.ServiceLocator" />
+	 		
+	<bean id="dataSourceServiceLocator" factory-bean="serviceLocator" factory-method="getDataSource">
+        <constructor-arg value="JBossMQDS" />
+    </bean>
+      
+    <!-- 
+	<bean id="dataSourceTest" 
+	    class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+	    <property name="driverClassName" 
+	        value="org.postgresql.Driver" /> 
+	    <property name="url" 
+	        value="jdbc:postgresql://localhost/db" /> 
+	    <property name="username" value="username" /> 
+	    <property name="password" value="password" /> 
+	</bean> 
+	 
+	<bean id="logEntryDao" class="com.erdas.LogEntryDb.JdbcLogEntryDao">
+		<property name="dataSource" ref="dataSourceServiceLocator"></property>
+	</bean>
+	-->
+	
+</beans>
