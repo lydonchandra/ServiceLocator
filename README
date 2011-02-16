@@ -1,0 +1,6 @@
+This is a mavenised project of http://blog.vinodsingh.com/2008/12/jndi-lookup-on-tomcat-and-jboss-using.html
+
+I bundle the ServiceLocator class along with LifeRay's ServerDetector class.
+
+This maven project addresses issue with the difference in  JNDI naming in JBoss and Tomcat,
+Tomcat (6) binds that as 'java:/comp/env/jdbc/myDatasource' while JBoss (5) binds as 'java:/jdbc/myDatasource'.
